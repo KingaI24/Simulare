@@ -1,0 +1,54 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.cell.TextFieldTableCell?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+
+
+<HBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.UI.Controller">
+
+    <VBox>
+        <Label text="Agenda:" />
+        <TableView fx:id="tblAgenda" editable="true">
+            <columns>
+                <TableColumn fx:id="tableColumnId" text="id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnName" text="Date (DD.MM.YYYY)">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDescription" text="Duration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="duration" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDate" text="Debut">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="debut" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDate" text="Hour">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="hour" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <HBox alignment="BOTTOM_RIGHT">
+            <Button fx:id="btnMaxOnDay" onAction="#btnMaxOnDayClick" text="Maximum on Date" />
+            <TextField fx:id="txtDate" promptText="Date (DD.MM.YYYY)"/>
+        </HBox>
+    </VBox>
+
+</HBox>
