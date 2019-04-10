@@ -1,7 +1,8 @@
-package sample.Repository;
+package sample.Tests;
 
 import org.junit.jupiter.api.Test;
 import sample.Domain.Agenda;
+import sample.Repository.RepositoryAgenda;
 
 import java.util.List;
 
